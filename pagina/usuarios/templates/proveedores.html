@@ -1,0 +1,19 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+
+{% block bloqueCambio %}
+
+
+<h1>Proveedores</h1>
+
+<form action="{% url 'proveedores' %}" method="POST">{% csrf_token %} 
+   
+        <p> CUIT: <input type="number" name="cuit"></p>
+        <p> Razon Social: <input type="text" name="razonSocial"></p>
+        <p> Email: <input type="email" name="email"></p>
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock bloqueCambio %}
