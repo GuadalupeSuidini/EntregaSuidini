@@ -8,11 +8,9 @@
 
 <h1>Proveedores</h1>
 
-<form action="{% url 'proveedores' %}" method="POST">{% csrf_token %} 
+<form action="{% url 'proveedoresFormularios' %}" method="POST">{% csrf_token %} 
    
-        <p> CUIT: <input type="number" name="cuit"></p>
-        <p> Razon Social: <input type="text" name="razonSocial"></p>
-        <p> Email: <input type="email" name="email"></p>
+        {{miFormulario.as_p}}
         <input type="submit" value="Enviar">
     </form>
 

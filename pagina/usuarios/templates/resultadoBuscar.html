@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+
+{% block bloqueCambio %}
+    <p>Estamos buscando los Empleados con DNI nro: {{dni}}</p>
+
+    
+    {% if empleados %}
+
+        <ul>
+
+            
+            {% for empleado in empleados  %}
+
+            <li>
+                {{empleado.nombre}}-{{empleado.dni}}
+            </li>
+                
+            {% endfor %}
+                
+        </ul>
+    {% else %}
+        <p>No hubo coincidencias.</p>
+        
+    {% endif %}
+        
+{% endblock bloqueCambio %}

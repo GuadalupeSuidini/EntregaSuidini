@@ -8,14 +8,12 @@
 
 <h1>Empleados</h1>
 
-<form action="{% url 'empleados' %}" method="POST">{% csrf_token %} 
+<form action="{% url 'empleadosFormularios' %}" method="POST">{% csrf_token %} 
    
-        <p> Nombre: <input type="text" name="nombre"></p>
-        <p> Apellido: <input type="text" name="apellido"></p>
-        <p> Fecha de nacimiento: <input type="date" name="fechaNacimiento"></p>
-        <p> Email: <input type="email" name="email"></p>
-        <p> DNI: <input type="number" name="dni"></p>
+        {{miFormulario.as_p}}
+
         <input type="submit" value="Enviar">
+
     </form>
 
 {% endblock bloqueCambio %}
